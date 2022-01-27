@@ -31,3 +31,7 @@
         queue<int> p_queue;
 # using `set` and `vector` :
     set<type_off_data> name ={data , data1,data2};
+# using `stack` :
+    `LAST in FIRST out` LIFO
+        stack<type_off_data> name;
+        stack_name.push(value);
