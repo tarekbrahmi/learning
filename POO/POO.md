@@ -22,5 +22,7 @@ class CLASSAME{
     pass-by-value : A copy of the entire object is passed to the function.
     pass-by-referance : Only the address of the object is transferred to the function.
 
-# friendly function :
+# friendly function  using `friend` keyword :
+- A friend function not a member function , has full access rights to the private members of the class.
+- is not in the scope of the class, it cannot be called using the object of that class.
     
