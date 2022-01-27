@@ -36,4 +36,8 @@
         stack<type_off_data> name;
         stack_name.push(value);
 # using `deque` :
-    
+    deque<type_off_data> name ={data , data1,data2};
+
+# using `list` :
+    list<type_off_data> name;
+    list.push_(back/front)(value);
