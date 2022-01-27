@@ -41,3 +41,8 @@
 # using `list` and `forward_list` :
     list<type_off_data> name;
     list.push_(back/front)(value);
+# using `tuple` :
+    tuple<data_types> tupleName(values);
+    getting values : get<index>(tupleName);
+    getting the size off the tuple : tuple_size<decltype(tupleName)>::value
+    
