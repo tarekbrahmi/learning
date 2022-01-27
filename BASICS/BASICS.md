@@ -38,6 +38,6 @@
 # using `deque` :
     deque<type_off_data> name ={data , data1,data2};
 
-# using `list` :
+# using `list` and `forward_list` :
     list<type_off_data> name;
     list.push_(back/front)(value);
