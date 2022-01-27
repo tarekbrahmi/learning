@@ -29,3 +29,5 @@
         priority_queue<int> p_queue;
     simple queue `first in first out` FIFO
         queue<int> p_queue;
+# using `set` and `vector` :
+    set<type_off_data> name ={data , data1,data2};
