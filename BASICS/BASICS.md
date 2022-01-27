@@ -24,3 +24,8 @@
     clear() – Removes all the elements from the map.
 # using `multimap` :
     multimap<type_keys,type_values> name ={{"key1","value1"},{"key2","value2"},{"key3","value3"}};
+# using `queue` :
+    priority queue `last in first out` LIFO 
+        priority_queue<int> p_queue;
+    simple queue `first in first out` FIFO
+        queue<int> p_queue;
