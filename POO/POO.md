@@ -16,7 +16,7 @@ class CLASSAME{
 # using `static` member functions :
 - A static function can have access to only other static members declared in the same class.
 - A static member function can be called using the class name as follows :
-        className::StaticFunctionName();
+        👉 className::StaticFunctionName();
 
 # object as a function argument:
     pass-by-value : A copy of the entire object is passed to the function.
