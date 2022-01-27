@@ -14,3 +14,4 @@ recurse() {
   fi
 }
 recurse "$1"
+echo "Done"
