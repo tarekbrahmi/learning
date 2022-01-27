@@ -2,7 +2,9 @@
     
     array<int,length> a= {elements};
 
-# `auto` keyword : The auto keyword specifies that the type of the variable that is being declared will be automatically deducted from its initializer. In the case of functions, if their return type is auto then that will be evaluated by return type expression at runtime
+# `auto` keyword : 
+    
+    The auto keyword specifies that the type of the variable that is being declared will be automatically deducted from its initializer. In the case of functions, if their return type is auto then that will be evaluated by return type expression at runtime
     
     auto pos = a.begin();
 

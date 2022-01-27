@@ -28,15 +28,14 @@ int main()
     }
     // copy map into other map assignment
     map<string, long> data_copy(data.begin(), data.end());
-    
-    
+    // delete element with key="phone"
+    data_copy.erase("phone");
+
     // loop throw map
     map<string, long>::iterator _iter;
     for (_iter = data_copy.begin(); _iter != data_copy.end(); _iter++)
     {
         cout << "key of copy ... " << _iter->first << " value " << _iter->second << endl;
     }
-    
-
     return 0;
 }
