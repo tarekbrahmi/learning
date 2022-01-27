@@ -2,12 +2,12 @@
 #include <cstdio>
 using namespace std;
 class PERSON
-{
+{   
+    // private variable memebres
     int age;
     char name[2];
+    // static variable memebres
 
-private:
-    char summray[];
 
 public:
     void setData(void);
@@ -24,12 +24,11 @@ void PERSON::setData(void)
     cin >> name;
     cout << "Enter age" << endl;
     cin >> age;
-    sprintf(summray,"Name %s age %d", name, age);
-    cout << summray << endl;
+    
 }
 int main()
 {
-    PERSON persons[1];
+    PERSON persons[2];
     int i = 0;
     while (i < 1)
     {
