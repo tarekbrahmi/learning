@@ -35,3 +35,5 @@
     `LAST in FIRST out` LIFO
         stack<type_off_data> name;
         stack_name.push(value);
+# using `deque` :
+    
