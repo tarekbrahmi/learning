@@ -1,11 +1,11 @@
 # class Declaration:
->
-```class CLASSAME{
+```
+class CLASSAME{
         public:
             ...
         private:
             ...
-    }
+}
 ```
 
 # using `static` member variable :
@@ -41,6 +41,6 @@ class A{
 >
 - ___a pointer can be declared as above :___
   - We can define a pointer to the member `i` as follows :
-    - int A::*ip=&A::i
+    -  👉 int A::*ip=&A::i
     - The phrase `A :: *` means “pointer - to - member of a class” . The phrase `&A::i` means the “Address of the i member of a class”
     
