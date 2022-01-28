@@ -18,7 +18,7 @@ private:
 
 public:
     Account1() { balance = 90; };
-    void showBalance1() { cout << "Balance 1 is now " << balance << endl; }
+    void showBalance1();
     friend int transfert(Account1 &acc1, Account2 &acc2, int mount);
 };
 int transfert(Account1 &acc1, Account2 &acc2, int mount)
@@ -32,6 +32,12 @@ int transfert(Account1 &acc1, Account2 &acc2, int mount)
     else
     {
         return -1;
+    }
+}
+void Account1::showBalance1()
+{
+    {
+        cout << "Balance 1 is now " << balance << endl;
     }
 }
 

@@ -25,4 +25,21 @@ class CLASSAME{
 # friendly function  using `friend` keyword :
 - A friend function not a member function , has full access rights to the private members of the class.
 - is not in the scope of the class, it cannot be called using the object of that class.
+
+# using pointeur to member :
+- take the address of a member of a class and assign it to a pointer.
+- The address of a member can be obtained by applying the operator `&` to a class member name.
+> Example :
+```
+class A{
+    private :
+        int i;
+    public :
+        void show(void);
+}
+```
+>
+- ___a pointer can be declared as above :___.
+  - We can define a pointer to the member i as follows :
+    - int A::*ip=&A::i
     
