@@ -77,8 +77,23 @@ return-type class-name :: operator op( arg-list)
 > - operator overloading(using member function) 
 > - operator overloading(using friend function)
 # `single-inheritance` :
+>
 ```
 class Child : public Parent{
     ...
 }
 ```
+
+> ```
+class Child : protected Parent{
+    ...
+}
+```
+>
+```
+class Child : Parent{
+    ...
+}```
+- ***Private***: when a base class is privately inherited by a derived class, 'public members' of the base class become private members of the derived class and therefore the public members of the base class can be accessed by its own objects using the dot operator. The result is that we have no member of base class that is accessible to the objects of the derived class.
+- ***Public***: On the other hand, when the base class is publicly inherited, 'public members' of the base class become 'public members' of derived class and therefore they are accessible to the objects of the derived class.
+- ***Protected***: C++ provides a third visibility modifier, protected, which serve a little purpose in the inheritance. A member declared as protected is accessible by the member functions within its class and any class immediately derived from it. It cannot be accessed by functions outside these two classes.

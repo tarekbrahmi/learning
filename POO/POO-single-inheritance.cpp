@@ -22,7 +22,7 @@ void Parent::show(void)
 }
 
 // Child class
-class Child : public Parent
+class Child :public Parent
 {
     int child_data;
 
