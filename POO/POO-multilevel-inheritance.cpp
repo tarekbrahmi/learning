@@ -21,8 +21,8 @@ void Parent::show(void)
     cout << "Name : " << name << " Age : " << age << endl;
 }
 
-// Child class
-class Child :public Parent
+// Child class level1
+class Child : public Parent
 {
     int child_data;
 
@@ -34,21 +34,41 @@ public:
 void Child::get(void)
 {
     Parent::get();
-    cout << "Enter a number" << endl;
+    cout << "Enter a number for child 1" << endl;
     cin >> child_data;
 }
 void Child::show(void)
 {
     Parent::show();
-    cout << "data " << child_data << endl;
+    cout << "data 1 " << child_data << endl;
 }
 
+// Child class level2
+class Child2 : public Child
+{
+    int child2_data;
 
+public:
+    void get(void);
+    void show(void);
+};
+
+void Child2::get(void)
+{
+    Child::get();
+    cout << "Enter a number for child 2" << endl;
+    cin >> child2_data;
+}
+void Child2::show(void)
+{
+    Child::show();
+    cout << "data 2 " << child2_data << endl;
+}
 int main()
 {
-    Parent parent;
-    Child child;
+    Child2 child;
     child.get();
     child.show();
+
     return 0;
 }
