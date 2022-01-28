@@ -39,8 +39,12 @@ class A{
 }
 ```
 >
-- ___a pointer can be declared as above :___
+- ___a pointer to a member variable can be declared as above :___
   - We can define a pointer to the member `i` as follows :
     -  👉 int A::*ip=&A::i
     - The phrase `A :: *` means “pointer - to - member of a class” . The phrase `&A::i` means the “Address of the i member of a class”
-    
+  
+- ___a pointer to a member function can be declared as above :___
+  - (object-name .* pointer-to-member function)
+  - (pointer-to-object -> * pointer-to-member function)
+    - 💁 the parenthesis are necessary.
