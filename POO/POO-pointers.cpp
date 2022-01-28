@@ -21,7 +21,7 @@ int getSum(MyClass mc)
     int MyClass::*x_pointer = &MyClass::x; // x_pointer is a pointer to x member class `MyClass`
     int MyClass::*y_pointer = &MyClass::y;
 
-    MyClass *pointer_object = &mc; // pointer_object is a pointer to myClass object mc
+    MyClass *pointer_object = &mc;                         // pointer_object is a pointer to myClass object mc
     int summ = mc.*x_pointer + pointer_object->*y_pointer; // tow methode to use pointer object
     return summ;
 }

@@ -48,3 +48,13 @@ class A{
   - (object-name .* pointer-to-member function)
   - (pointer-to-object -> * pointer-to-member function)
     - 💁 the parenthesis are necessary.
+# using `constructor` in definition of class :
+> constructor is a special member function whose task is to initialize the objects of its class:
+- They should be declared in the public section .
+-  They are invoked automatically when the objects are created.
+-  They don't have return types, not even void and therefore they cannot return values.
+-  They cannot be inherited , though a derived class can call the base class constructor.
+-  An object with a constructor can't be used as a member of union.
+>   The constructors can also be used to allocate memory while creating objects .
+>   This will enable the system to allocate the right amount of memory for each object when the objects are not of the same size, thus resulting in the saving of memory. 
+> Allocate of memory to objects at the time of their construction is known as dynamic constructors of objects
