@@ -58,3 +58,4 @@ class A{
 >   The constructors can also be used to allocate memory while creating objects .
 >   This will enable the system to allocate the right amount of memory for each object when the objects are not of the same size, thus resulting in the saving of memory. 
 > Allocate of memory to objects at the time of their construction is known as dynamic constructors of objects
+# using `destructor` in definition of class :
