@@ -74,3 +74,11 @@ class MyClass{
 return-type class-name :: operator op( arg-list)
 {//function body}
 ```
+> operator overloading(using member function) 
+> operator overloading(using friend function)
+# `single-inheritance` :
+```
+class Child : public Parent{
+    ...
+}
+```
