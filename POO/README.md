@@ -67,3 +67,10 @@ class MyClass{
 ```
 
 # using `operator overloading` :
+> define a operator overloading:
+- To define an additional task to an operator, we must specify what it means in relation to the class to which the operator is applied.
+- This is done with the help of a special function called operator function.
+```
+return-type class-name :: operator op( arg-list)
+{//function body}
+```
