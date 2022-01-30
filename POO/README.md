@@ -141,19 +141,17 @@ class child : public parent1, public parent2
 ```
 Class class_name1
 {
-——–
-——–
+    //body
 };
 Class class_name2
 {
-——–
-———
+    //body
+
 };
 Class class_name3
 {
 Class_name1 obj1;
 Class_name2 obj2;
-———-
-———–
+//body
 };
 ```
