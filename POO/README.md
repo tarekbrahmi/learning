@@ -155,3 +155,6 @@ Class_name2 obj2;
 //body
 };
 ```
+# Difference between Inheritance and Containership :
+- ***Containership***: containership is the phenomenon of using one or more classes within the definition of other class. when a class contains the definition of some other classes, it is referred to as composition, containment or aggregation. the data member of a new class is an object of some other class. thus the other class is said to be composed of other classes and hence referred to as containership. composition is often referred to as a ___has-a___ relationship because the objects of the composite class have objects of the composed class as members.
+- ***Inheritance***: inheritance is the phenomenon of deriving a new class from an old one. inheritance supports code reusability. additional features can be added to a class by deriving a class from it and then by adding new features to it. class once written or tested need not be rewritten or redefined. inheritance is also referred to as specialization or derivation, as one class is inherited or derived from the other. it is also termed as ___is-a___ relationship because every object of the class being defined is also an object of the inherited class.
