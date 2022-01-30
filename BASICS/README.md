@@ -50,7 +50,7 @@ getting the size off the tuple : tuple_size<decltype(tupleName)>::value
 - catch all.
 # `Template` :
 >Template supports generic programming:
-- ***Function template *** :
+***Function template *** :
 ```
 template <class T>
     return_type name_func(args){
@@ -59,7 +59,7 @@ template <class T>
 ```
     - Overloading of function template:
     - Multiple arguments function template:
-- ***Class template *** :
+***Class template *** :
 ```
 template <class T>
     class ClassName{
