@@ -57,8 +57,8 @@ template <class T>
         //body 
     }
 ```
-    - Overloading of function template:
-    - Multiple arguments function template:
+- Overloading of function template:
+- Multiple arguments function template:
 ***Class template *** :
 ```
 template <class T>
