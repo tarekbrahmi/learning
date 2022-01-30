@@ -48,4 +48,7 @@ getting the size off the tuple : tuple_size<decltype(tupleName)>::value
 - Array reference out of bound.
 - multiple catches in a program.
 - catch all.
-  
+# `Template` :
+>Template supports generic programming:
+- ***Function template *** :
+- ***Class template *** :
