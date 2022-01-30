@@ -109,10 +109,32 @@ class derived : visibility base1, visibility base2
     ...
 }
 ```
-# ` hierarchical-inheritence` :
+# `hierarchical-inheritence` :
 - 
-# ` hybrid-inheritence` :
+# `hybrid-inheritence` :
 -  Applying two or more types of inheritance to design a program .
 
-# `virtual-base-classes` :
+# `virtual-base-class` :
 -  A situation which would require the use of both multiple and multi level inheritance. Consider a situation, where all the three kinds of inheritance, namely ___multi-level___, ___multiple___ and ___hierarchical___ are involved.
+-  Let us say the 'child' has two direct base classes **parent1** and **parent2** which themselves has a common base class **grandparent**. The child inherits the traits of **grandparent** via two separate paths. It can also be inherit directly as shown by the broken line. The grandparent is sometimes referred to as **INDIRECT BASE CLASS**. Now, the inheritance by the child might cause some problems. All the public and protected members of **grandparent** are inherited into **child** twice,first via **parent1** and again via **parent2**. So, there occurs a duplicacy which should be avoided.
+-  The duplication of the inherited members can be avoided by making common base class as the virtual base class.
+```
+class g_parent
+{
+//Body
+};
+class parent1: virtual public g_parent
+{
+// Body
+};
+class parent2: public virtual g_parent
+{
+// Body
+};
+class child : public parent1, public parent2
+{
+// body
+};
+```
+
+
