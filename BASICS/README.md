@@ -51,6 +51,18 @@ getting the size off the tuple : tuple_size<decltype(tupleName)>::value
 # `Template` :
 >Template supports generic programming:
 - ***Function template *** :
+```
+template <class T>
+    return_type name_func(args){
+        //body 
+    }
+```
     - Overloading of function template:
     - Multiple arguments function template:
 - ***Class template *** :
+```
+template <class T>
+    class ClassName{
+        //body 
+    }
+```
