@@ -136,5 +136,24 @@ class child : public parent1, public parent2
 // body
 };
 ```
-
-
+# Containership in C++ :
+> When a class contains objects of another class or its members, this kind of relationship is called containership or nesting and the class which contains objects of another class as its members is called as container class.
+```
+Class class_name1
+{
+——–
+——–
+};
+Class class_name2
+{
+——–
+———
+};
+Class class_name3
+{
+Class_name1 obj1;
+Class_name2 obj2;
+———-
+———–
+};
+```

@@ -43,4 +43,9 @@ list.push_(back/front)(value);
 tuple<data_types> tupleName(values);
 getting values : get<index>(tupleName);
 getting the size off the tuple : tuple_size<decltype(tupleName)>::value
-    
+
+# `exception handling` :
+- Array reference out of bound.
+- multiple catches in a program.
+- catch all.
+  
