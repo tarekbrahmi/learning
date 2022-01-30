@@ -109,3 +109,10 @@ class derived : visibility base1, visibility base2
     ...
 }
 ```
+# ` hierarchical-inheritence` :
+>
+# ` hybrid-inheritence` :
+> Applying two or more types of inheritance to design a program .
+
+# `virtual-base-classes` :
+> A situation which would require the use of both multiple and multi level inheritance. Consider a situation, where all the three kinds of inheritance, namely ___multi-level___, ___multiple___ and ___hierarchical___ are involved.
