@@ -3,9 +3,9 @@
 > A graph data structure is a collection of nodes that have data and are connected to other nodes.
 > A Graph is a finite collection of objects and relations existing between objects. If we represent objects as vertices(or nodes) and relations as edges then we can get following two types of graph.
 - **Directed Graphs**: In directed graph, an edge is represented by an ordered pair of vertices (i,j) in which edge originates from vertex i and terminates on vertex j. Given below is an example of an directed graph.
-  ![graph](/ALGORITHMS-DATA-STRUCT/img/directedGraph.png)
+![graph](/ALGORITHMS-DATA-STRUCT/img/directedGraph.png)
 - **Undirected Graphs**: In Undireced graph, edges are represented by unordered pair of vertices.Given below is an example of an undirected graph.
-  ![graph](/ALGORITHMS-DATA-STRUCT/img/undirectedGraph.png)
+![graph](/ALGORITHMS-DATA-STRUCT/img/undirectedGraph.png)
 
 More precisely, a graph is a data structure (V, E) that consists of :
 - A collection of vertices V
