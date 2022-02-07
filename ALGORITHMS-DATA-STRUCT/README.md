@@ -5,7 +5,7 @@ More precisely, a graph is a data structure (V, E) that consists of :
 - A collection of vertices V
 - A collection of edges E, represented as ordered pairs of vertices (u,v)
 > example off Graph :
-![graph](/ALGORITHMS-DATA-STRUCT/img/graph0.png)
+    ![graph](/ALGORITHMS-DATA-STRUCT/img/graph0.png)
 in this graph :
 ```
 V = {0, 1, 2, 3}
