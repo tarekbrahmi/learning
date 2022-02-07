@@ -1,146 +1,138 @@
 #include <iostream>
 using namespace std;
+
+// Making a node struct containing a data int and a pointer
+// to another node
 struct Node
 {
     int data;
     Node *next;
 };
+
 class LinkedList
 {
-private:
-    Node *head, *tail;
+    // Head pointer
+    Node *head;
 
 public:
+    // default constructor. Initializing head pointer
     LinkedList()
     {
         head = NULL;
-        tail = NULL;
     }
-    void createNode(int value)
+
+    // inserting elements (At start of the list)
+    void insert(int val)
     {
-        Node *CurrentNode = new Node;
-        CurrentNode->data = value;
-        CurrentNode->next = NULL;
+        // make a new node
+        Node *new_node = new Node;
+        new_node->data = val;
+        new_node->next = NULL;
+
+        // If list is empty, make the new node, the head
         if (head == NULL)
-        {
-            head = CurrentNode;
-            tail = CurrentNode;
-            CurrentNode = NULL;
-        }
+            head = new_node;
+        // else, make the new_node the head and its next, the previous
+        // head
         else
         {
-            tail->next = CurrentNode;
-            tail = CurrentNode;
+            new_node->next = head;
+            head = new_node;
         }
     }
+
+    // loop over the list. return true if element found
+    bool search(int val)
+    {
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            if (temp->data == val)
+                return true;
+            temp = temp->next;
+        }
+        return false;
+    }
+
+    void remove(int val)
+    {
+        // If the head is to be deleted
+        if (head->data == val)
+        {
+            delete head;
+            head = head->next;
+            return;
+        }
+
+        // If there is only one element in the list
+        if (head->next == NULL)
+        {
+            // If the head is to be deleted. Assign null to the head
+            if (head->data == val)
+            {
+                delete head;
+                head = NULL;
+                return;
+            }
+            // else print, value not found
+            cout << "Value not found!" << endl;
+            return;
+        }
+
+        // Else loop over the list and search for the node to delete
+        Node *temp = head;
+        while (temp->next != NULL)
+        {
+            // When node is found, delete the node and modify the pointers
+            if (temp->next->data == val)
+            {
+                Node *temp_ptr = temp->next->next;
+                delete temp->next;
+                temp->next = temp_ptr;
+                return;
+            }
+            temp = temp->next;
+        }
+
+        // Else, the value was neve in the list
+        cout << "Value not found" << endl;
+    }
+
     void display()
     {
-        Node *CurrentNode = new Node;
-        CurrentNode = head;
-        while (CurrentNode != NULL)
+        Node *temp = head;
+        while (temp != NULL)
         {
-            cout << CurrentNode->data << "\t";
-            CurrentNode = CurrentNode->next;
+            cout << temp->data << " ";
+            temp = temp->next;
         }
-    }
-    void insert_start(int value)
-    {
-        Node *CurrentNode = new Node;
-        CurrentNode->data = value;
-        CurrentNode->next = head;
-        head = CurrentNode;
-    }
-    void insert_position(int pos, int value)
-    {
-        Node *pre = new Node;
-        Node *cur = new Node;
-        Node *CurrentNode = new Node;
-        cur = head;
-        for (int i = 1; i < pos; i++)
-        {
-            pre = cur;
-            cur = cur->next;
-        }
-        CurrentNode->data = value;
-        pre->next = CurrentNode;
-        CurrentNode->next = cur;
-    }
-    void delete_first()
-    {
-        Node *CurrentNode = new Node;
-        CurrentNode = head;
-        head = head->next;
-        delete CurrentNode;
-    }
-    void delete_last()
-    {
-        Node *current = new Node;
-        Node *previous = new Node;
-        current = head;
-        while (current->next != NULL)
-        {
-            previous = current;
-            current = current->next;
-        }
-        tail = previous;
-        previous->next = NULL;
-        delete current;
-    }
-    void delete_position(int pos)
-    {
-        Node *current = new Node;
-        Node *previous = new Node;
-        current = head;
-        for (int i = 1; i < pos; i++)
-        {
-            previous = current;
-            current = current->next;
-        }
-        previous->next = current->next;
+        cout << endl;
     }
 };
+
 int main()
 {
-    LinkedList obj;
-    obj.createNode(25);
-    obj.createNode(50);
-    obj.createNode(90);
-    obj.createNode(40);
-    cout << "\n--------------------------------------------------\n";
-    cout << "---------------Displaying All Nodes---------------";
-    cout << "\n--------------------------------------------------\n";
-    obj.display();
-    cout << "\n--------------------------------------------------\n";
-    cout << "-----------------Inserting At End-----------------";
-    cout << "\n--------------------------------------------------\n";
-    obj.createNode(55);
-    obj.display();
-    cout << "\n--------------------------------------------------\n";
-    cout << "----------------Inserting At Start----------------";
-    cout << "\n--------------------------------------------------\n";
-    obj.insert_start(50);
-    obj.display();
-    cout << "\n--------------------------------------------------\n";
-    cout << "-------------Inserting At Particular--------------";
-    cout << "\n--------------------------------------------------\n";
-    obj.insert_position(5, 60);
-    obj.display();
-    cout << "\n--------------------------------------------------\n";
-    cout << "----------------Deleting At Start-----------------";
-    cout << "\n--------------------------------------------------\n";
-    obj.delete_first();
-    obj.display();
-    cout << "\n--------------------------------------------------\n";
-    cout << "-----------------Deleing At End-------------------";
-    cout << "\n--------------------------------------------------\n";
-    obj.delete_last();
-    obj.display();
-    cout << "\n--------------------------------------------------\n";
-    cout << "--------------Deleting At Particular--------------";
-    cout << "\n--------------------------------------------------\n";
-    obj.delete_position(4);
-    obj.display();
-    cout << "\n--------------------------------------------------\n";
 
-    return 0;
+    LinkedList l;
+    // inserting elements
+    l.insert(6);
+    l.insert(9);
+    l.insert(1);
+    l.insert(3);
+    l.insert(7);
+    cout << "Current Linked List: ";
+    l.display();
+
+    cout << "Deleting 1: ";
+    l.remove(1);
+    l.display();
+
+    cout << "Deleting 13: ";
+    l.remove(13);
+
+    cout << "Searching for 7: ";
+    cout << l.search(7) << endl;
+
+    cout << "Searching for 13: ";
+    cout << l.search(13) << endl;
 }
