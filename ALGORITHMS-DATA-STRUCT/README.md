@@ -37,3 +37,25 @@ Graphs are commonly represented in two ways:
     - Graph Traversal.
     - Add elements(vertex, edges) to graph.
     - Finding the path from one vertex to another.
+- Complexity :
+    `N` denotes the number of nodes/ vertices and M denotes the number of edges
+    `degree(V)` denotes the number of edges from node V
+    - Adjacency Matrix Complexity :
+      - Space: _O(N*N)_
+      - Check if there is an edge between nodes U and V: _O(1)_
+      - Find all edges from a node: _O(N)_
+    - Adjacency List Complexity :
+      - Space: _O(N+M)_
+      - Check if there is an edge between nodes U and V: _O(degree(V))_
+      - Find all edges from a node V: _O(degree(V))_
+- where we use ! :
+    As we have seen in complexity comparisions both representation have their pros and cons and implementation of both representation is simple. It is recommended that we should use Adjacency Matrix for representing Dense Graphs and Adjacency List for representing Sparse Graphs.
+
+    Note: Dense Graph are those which has large number of edges and sparse graphs are those which has small number of edges.
+
+- Application :
+    - **Adjacency Matrix**: 
+    Adjacency matrix is used where information about each and every possible edge is required for the proper working of an algorithm like :- Floyd-Warshall Algorithm where shortest path from each vertex to each every other vertex is calculated (if it exists). It can also be used in DFS (Depth First Search) and BFS (Breadth First Search) but list is more efficient there. Sometimes it is also used in network flows.
+
+    - **Adjacency List**:
+    Adjacency List is a space efficient method for graph representation and can replace adjacency matrix almost everywhere if algorithm doesn't require it explicitly. It is used in places like: BFS, DFS, Dijkstra's Algorithm etc.
