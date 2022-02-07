@@ -38,8 +38,8 @@ Graphs are commonly represented in two ways:
     - Add elements(vertex, edges) to graph.
     - Finding the path from one vertex to another.
 - Complexity :
-    `N` denotes the number of nodes/ vertices and M denotes the number of edges
-    `degree(V)` denotes the number of edges from node V
+- `N` denotes the number of nodes/ vertices and M denotes the number of edges
+- `degree(V)` denotes the number of edges from node V
     - Adjacency Matrix Complexity :
       - Space: _O(N*N)_
       - Check if there is an edge between nodes U and V: _O(1)_
