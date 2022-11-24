@@ -30,7 +30,7 @@ int main()
 {
     PERSON persons[2];
     int i = 0;
-    while (i < 1)
+    while (i < 2)
     {
         cout << "Enter data for person " << i + 1 << endl;
         persons[i].setData();
@@ -38,7 +38,7 @@ int main()
         i++;
     }
     int j = 0;
-    while (j < 1)
+    while (j < 2)
     {
         cout << "data for person " << j + 1 << endl;
         persons[j].displayData();
