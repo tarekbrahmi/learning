@@ -49,3 +49,20 @@ getting the size off the tuple : tuple_size<decltype(tupleName)>::value
 - multiple catches in a program.
 - catch all.
   
+
+# `typedef`:
+-  used for aliasing existing data types.
+-  allow you to give descriptive names to standard data types.
+-  examples :
+   - typedef <current_name> <new_name>
+     - ```typedef vector<int> MyVector;```
+   - typedef <data_type_name> <new_name>
+     - ```typedef unsigned long long int ulli;```
+   - typedef <data_structure_name> <new_name>
+     - ```typedef vector<int> MyVector;```
+   - typedef <data_type> <alias_name> [size]
+     - ```typedef int array[33];```
+   - typedef <data_type>* <alias_name>
+     - ```typedef int* IntPointer;```
+   - typedef <return_type> (*<alias_name>)(<parameter_type>,<parameter_type>,....);
+     - ```typedef int (*fun_ptr)(int, int); fun_ptr new_ptr = &function; ```
