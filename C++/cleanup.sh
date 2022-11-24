@@ -8,7 +8,7 @@ recurse() {
         recurse "$i"
      done
   elif [ -f "$path" ] ; then
-    if [ -x "$path" ] ; then
+    if [[ -x "$path" &&  "$path" != "cleanup.sh" &&  "$path" != "run.sh" ]] ; then
         rm "$path"
     fi
   fi
