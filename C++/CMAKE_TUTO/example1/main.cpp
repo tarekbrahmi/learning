@@ -1,6 +1,6 @@
 #include <iostream>
 #ifndef SYSTEM
-#define SYSTEM "Cannot get system name"
+#define SYSTEM "NOT_DEFINED"
 #endif
 auto sum(int a, int b)
 {

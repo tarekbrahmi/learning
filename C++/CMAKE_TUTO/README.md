@@ -101,3 +101,8 @@ add_definitions(-DCMAKEMACRO="OK!")
 ### CMake Folder Organization
 - While building applications, we try to keep source tree clean and separate auto-generated files and binaries.
 - Trying to generate binary file inside bin folder with setting `CMAKE_RUNTIME_OUTPUT_DIRECTORY` or `EXECUTABLE_OUTPUT_PATH`. 
+
+### Building a Library with CMake
+>Adding a `template` class which is able to do more functions
+
+>Make /lib/<lib_name>/ that contain the template class(.hpp) and operation in(.cpp)
