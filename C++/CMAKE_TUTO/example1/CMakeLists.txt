@@ -32,4 +32,7 @@ endif()
 # Generate binary file inside bin folder
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-add_executable(hello main.cpp)
+#set(LIBRARY_OUTPUT_PATH  ${CMAKE_BINARY_DIR}/lib)
+
+# Building Library with Target
+add_executable(hello main.cpp lib/MyLib/stuff.cpp lib/MyLib/stuff.hpp)
