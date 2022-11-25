@@ -18,7 +18,7 @@
 
 | Command                  | Description                                                 |
 |--------------------------|-------------------------------------------------------------|
-| `message`                | prints given message                                        |
+| `message`                | prints given [message](https://cmake.org/cmake/help/v3.0/command/message.html)                                       |
 | `cmake_minimum_required` | sets minimum version of cmake to be used                    |
 | `add_executable`         | adds executable target with given name                      |
 | `add_library`            | adds a library target to be build from listed source files  |
@@ -100,3 +100,4 @@ add_definitions(-DCMAKEMACRO="OK!")
 ```
 ### CMake Folder Organization
 - While building applications, we try to keep source tree clean and separate auto-generated files and binaries.
+- Trying to generate binary file inside bin folder with setting `CMAKE_RUNTIME_OUTPUT_DIRECTORY` or `EXECUTABLE_OUTPUT_PATH`. 
