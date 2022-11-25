@@ -10,3 +10,16 @@
   - If there are multiple modules, and each module can be compiled and built separately, `CMakeLists.txt` can be inserted into the sub folder.
 
 ###  CMake Commands
+>> similar to C++/Java methods or functions, which take parameters as a list and perform certain tasks accordingly.
+
+>> case insensitive.
+
+>> commonly used commands
+
+| command                  | Description                                                 |
+|--------------------------|-------------------------------------------------------------|
+| `message`                | prints given message                                        |
+| `cmake_minimum_required` | sets minimum version of cmake to be used                    |
+| `add_executable`         | adds executable target with given name                      |
+| `add_library`            | adds a library target to be build from listed source files  |
+| `add_subdirectory`       | adds a subdirectory to build                                |
