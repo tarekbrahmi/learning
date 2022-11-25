@@ -47,10 +47,32 @@
 > Variables are case-sensitive, not like commands. 
 > commonly used commands
 
-
 |Variable               | Description                                                   |
 |-----------------------|---------------------------------------------------------------|
 |`CMAKE_BINARY_DIR`     | Full path to top level of build tree and binary output folder |
 |`CMAKE_HOME_DIRECTORY` | Path to top of source tree                                    |
 |`CMAKE_SOURCE_DIR`     | Full path to top level of source tree.                        |
 |`CMAKE_INCLUDE_PATH`   | Path used to find file, path                                  |
+
+>Variable values can be accessed with `${<variable_name>}`.
+
+___example :___
+```
+message("CXX Standard: ${CMAKE_CXX_STANDARD}")
+set(CMAKE_CXX_STANDARD 14)
+set(TRIAL_VARIABLE "VALUE")
+message("${TRIAL_VARIABLE}")
+```
+
+### CMake Lists
+>A list of elements represented as a string by concatenating elements separated by semi-column `;`.
+
+```
+set(files a.txt b.txt c.txt)
+# sets files to "a.txt;b.txt;c.txt"
+
+foreach(file ${files})
+    message("Filename: ${file}")
+endforeach()
+
+```
