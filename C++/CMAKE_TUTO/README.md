@@ -92,3 +92,9 @@ endforeach()
 - target_compile_definitions() 
 - and others
   
+### Defining Macros using CMake
+> You can define compiler macros to send to code during build process to change behavior.
+> You can define macros in CMake with `add_definitions` command, using `-D flag` before the macro name.
+```
+add_definitions(-DCMAKEMACRO="OK!")
+```

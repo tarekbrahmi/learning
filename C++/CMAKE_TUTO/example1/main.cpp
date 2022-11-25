@@ -1,7 +1,11 @@
 #include <iostream>
-using namespace std;
+auto sum(int a, int b)
+{
+    return a + b;
+}
 int main()
 {
-    std::cout << "Hello World!" << endl;
+    std::cout << "Hello World!" << std::endl;
+    std::cout << "Sum of 3 + 4 : " << sum(3, 4) << std::endl;
     return 0;
 }
