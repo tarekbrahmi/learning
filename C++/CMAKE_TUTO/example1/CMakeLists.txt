@@ -4,6 +4,7 @@ project(CMakeHello)
 
 # if you want to add C++14 on command line, you can set -std=c++14
 set(CMAKE_CXX_STANDARD 14) # point compiler to build with C++14 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 # Disable in-source builds to prevent source tree corruption.
 if(" ${CMAKE_SOURCE_DIR}" STREQUAL " ${CMAKE_BINARY_DIR}")
@@ -29,6 +30,6 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES Windows)
 endif()
 
 # Generate binary file inside bin folder
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
 add_executable(hello main.cpp)
