@@ -8,4 +8,6 @@ $ mkdir build
 $ cd build
 $ cmake .. # build from `CMakeLists.txt` in `..` folder
 $ make all #make hello works also
+or in root directory of the project
+$ cmake -H. -Bbuild # H indicates source directory , B indicates build directory
 ```

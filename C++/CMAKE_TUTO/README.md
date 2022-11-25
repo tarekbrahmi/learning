@@ -98,3 +98,5 @@ endforeach()
 ```
 add_definitions(-DCMAKEMACRO="OK!")
 ```
+### CMake Folder Organization
+- While building applications, we try to keep source tree clean and separate auto-generated files and binaries.
