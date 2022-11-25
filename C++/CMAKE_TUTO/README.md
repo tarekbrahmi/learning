@@ -76,3 +76,19 @@ foreach(file ${files})
 endforeach()
 
 ```
+
+### CMake Generator Expressions ([all cmake generator expressions](https://cmake.org/cmake/help/v3.3/manual/cmake-generator-expressions.7.html))
+>Generator expressions are evaluated during build system generation to produce information specific to each build configuration.
+
+>Generator expressions are allowed in the context of many target properties
+- LINK_LIBRARIES
+- INCLUDE_DIRECTORIES
+- COMPILE_DEFINITIONS 
+- and others
+
+>They may also be used when using commands to populate those properties
+- target_link_libraries()
+- target_include_directories()
+- target_compile_definitions() 
+- and others
+  
