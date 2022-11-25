@@ -16,7 +16,7 @@
 
 > commonly used commands
 
-| command                  | Description                                                 |
+| Command                  | Description                                                 |
 |--------------------------|-------------------------------------------------------------|
 | `message`                | prints given message                                        |
 | `cmake_minimum_required` | sets minimum version of cmake to be used                    |
@@ -35,3 +35,22 @@
 - `return`
 - `set_property` (assign value to variable.)
 
+### CMake Environment Variables ([all environment variables](https://cmake.org/cmake/help/latest/manual/cmake-env-variables.7.html))
+> Environment variables are used to configure compiler flags, linker flags, test configurations for a regular build process. Compiler have to be guided to search for given directories for libraries.
+
+> to enable all warnings during compile process:
+- write `-Wall` to build command ```set(CMAKE_CXX_FLAGS "-Wall")```
+
+### CMake Variables ([all variables](https://cmake.org/cmake/help/v3.0/manual/cmake-variables.7.html#manual:cmake-variables(7)))
+> CMake includes predefined variables which are set by default as location of source tree and system components.
+
+> Variables are case-sensitive, not like commands. 
+> commonly used commands
+
+
+|Variable               | Description                                                   |
+|-----------------------|---------------------------------------------------------------|
+|`CMAKE_BINARY_DIR`     | Full path to top level of build tree and binary output folder |
+|`CMAKE_HOME_DIRECTORY` | Path to top of source tree                                    |
+|`CMAKE_SOURCE_DIR`     | Full path to top level of source tree.                        |
+|`CMAKE_INCLUDE_PATH`   | Path used to find file, path                                  |
