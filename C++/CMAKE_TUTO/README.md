@@ -106,3 +106,5 @@ add_definitions(-DCMAKEMACRO="OK!")
 >Adding a `template` class which is able to do more functions
 
 >Make /lib/<lib_name>/ that contain the template class(.hpp) and operation in(.cpp)
+
+### Shared vs Static Library

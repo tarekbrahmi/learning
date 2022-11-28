@@ -5,6 +5,7 @@
 #include "lib/MyLib/stuff.hpp"
 int main()
 {
+    // creating new operator
     stuff::operations op;
     std::cout << "Hello World!" << std::endl;
     std::cout << "Im using : " << SYSTEM << std::endl;
