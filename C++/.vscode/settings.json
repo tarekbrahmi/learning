@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/CMAKE_TUTO/example1"
+    "cmake.sourceDirectory": "${workspaceFolder}/CMAKE_TUTO/example1",
+    "files.associations": {
+        "array": "cpp"
+    }
 }
