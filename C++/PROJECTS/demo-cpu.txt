@@ -1,0 +1,6 @@
+1 get cpu now --> $(head -n1 /proc/stat)
+2 sum of x=(502295 2324 153923 1847030 161258 36528 33071 0 0 0)
+3 save the value(x) in diffirent var (y) for next iteration 
+4 get the cpu usage again 
+5 cpu_delta= (y-x) 
+6 get the idle state cpu_idle =
