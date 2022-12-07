@@ -76,7 +76,7 @@ int main()
     CMD CPU_CMD = CMD();
     CPU_USAGE _CPU_USAGE = CPU_USAGE();
     UTIL util = UTIL();
-    cout << util.trim(CPU_CMD.exec(cmd_tump)) << endl;
+    // cout << util.trim(CPU_CMD.exec(cmd_tump)) << endl;
     cout << _CPU_USAGE.Cpu_Usage() << endl;
     return 0;
 }
