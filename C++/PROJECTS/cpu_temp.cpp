@@ -28,7 +28,7 @@ public:
     }
     string exec(char *cmd)
     {
-        cout << "command :" << cmd << endl;
+        // cout << "command :" << cmd << endl;
         array<char, 128> buffer;
         string result;
         FILE *fp = popen(cmd, "r");
@@ -71,12 +71,17 @@ public:
 int main()
 {
     char cmd_tump[255];
+    char cmd_sleep[255] = "/usr/bin/sleep 1";
     sprintf(cmd_tump, "%s %s", "/usr/bin/cat", PATH_CORE_0);
 
     CMD CPU_CMD = CMD();
     CPU_USAGE _CPU_USAGE = CPU_USAGE();
     UTIL util = UTIL();
-    // cout << util.trim(CPU_CMD.exec(cmd_tump)) << endl;
-    cout << _CPU_USAGE.Cpu_Usage() << endl;
+    while (true)
+    {
+
+        CPU_CMD.exec(cmd_sleep);
+        cout << _CPU_USAGE.Cpu_Usage() << endl;
+    }
     return 0;
 }
