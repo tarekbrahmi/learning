@@ -50,22 +50,6 @@ public:
 };
 class CPU_USAGE : public CMD
 {
-    // [pc@fedora PROJECTS]$ sh ./cpu_usage.sh
-    // --- First callc 672060 3039 212188 4115342 251246 57066 63903 0 0 0
-    // --- Make summ cpu_sum=5374844
-    // --- Make cpu_delta 5374844
-    // --- Make cpu_idle cpu , ,4115342
-    // --- Make cpu_used 5374844 4115342
-    // --- Calc usage 100 * cpu_used / cpu_delta)
-    // --- Keeeep values cpu_last_sum=5374844 cpu_last=(cpu 672060 3039 212188 4115342 251246 57066 63903 0 0 0)
-    // CPU usage at 23%
-    // --- First callc 672102 3040 212208 4115673 251246 57070 63904 0 0 0
-    // --- Make summ cpu_sum=5375243
-    // --- Make cpu_delta 5375243 5374844
-    // --- Make cpu_idle cpu , cpu ,331
-    // --- Make cpu_used 399 331
-    // --- Calc usage 100 * cpu_used / cpu_delta)
-    // --- Keeeep values cpu_last_sum=5375243 cpu_last=(cpu 672102 3040 212208 4115673 251246 57070 63904 0 0 0)
 public:
     CPU_USAGE(){};
     double CPU_usage_V2(unsigned long long &cpu_sum, unsigned long long &cpu_idle)
@@ -119,7 +103,7 @@ int main()
     {
 
         _CPU_USAGE.CPU_usage_V2(cpu_sum, cpu_idle);
-        CPU_CMD.exec(cmd_sleep);
+        // CPU_CMD.exec(cmd_sleep);
     }
 
     return 0;
