@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string>
 #include <cstdio>
+#include <bits/stdc++.h>
+#include <unistd.h>
 
 using namespace std;
 #define PATH_CORE_0 "/sys/class/thermal/thermal_zone0/temp" // Core 0
@@ -90,6 +92,7 @@ public:
 int main()
 {
     char cmd_tump[255];
+    // char _log[255];
     char cmd_sleep[255] = "/usr/bin/sleep 1";
     sprintf(cmd_tump, "%s %s", "/usr/bin/cat", PATH_CORE_0);
 
@@ -103,7 +106,10 @@ int main()
     {
 
         _CPU_USAGE.CPU_usage_V2(cpu_sum, cpu_idle);
-        // CPU_CMD.exec(cmd_sleep);
+        CPU_CMD.exec(cmd_sleep);
+        // ifstream log(cmd_tump);
+        // log >> _log;
+        // cout << "logss " << _log << endl;
     }
 
     return 0;
