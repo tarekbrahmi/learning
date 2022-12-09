@@ -101,20 +101,6 @@ public:
 
         return percent;
     }
-    double Cpu_Usage()
-    {
-        double percent;
-        unsigned long long user, nice, system, idle, iowait, irq, softirq, total;
-        FILE *file = fopen(PATH_CPU_STATE, "r");
-        fscanf(file, "cpu %llu %llu %llu %llu %llu %llu %llu", &user, &nice,
-               &system, &idle, &iowait, &irq, &softirq);
-        fclose(file);
-        total = user + nice + system + idle + iowait + irq + softirq;
-        percent = user;
-        percent *= 100;
-        percent /= total;
-        return percent;
-    }
 };
 
 int main()
