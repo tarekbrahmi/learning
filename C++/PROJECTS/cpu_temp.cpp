@@ -10,6 +10,9 @@
 using namespace std;
 #define PATH_CORE_0 "/sys/class/thermal/thermal_zone0/temp" // Core 0
 #define PATH_CORE_2 "/sys/class/thermal/thermal_zone2/temp" // Core 1
+#define PATH_BAT "/sys/class/power_supply"
+// #define PATH_BAT_CAPA_PERCENT "/sys/class/power_supply/BAT0/capacity"
+// #define PATH_BAT_STAT "/sys/class/power_supply/BAT0/status"
 #define PATH_CPU_STATE "/proc/stat"
 class UTIL
 {
@@ -52,6 +55,9 @@ public:
 };
 class CPU_USAGE : public CMD
 {
+private:
+    char cmd_sleep[255] = "/usr/bin/sleep 1";
+
 public:
     CPU_USAGE(){};
     double CPU_usage_V2(unsigned long long &cpu_sum, unsigned long long &cpu_idle)
@@ -84,7 +90,7 @@ public:
         // save the value
         cpu_sum = _cpu_sum;
         cpu_idle = idle;
-
+        exec(cmd_sleep);
         return percent;
     }
 };
@@ -93,7 +99,7 @@ int main()
 {
     char cmd_tump[255];
     // char _log[255];
-    char cmd_sleep[255] = "/usr/bin/sleep 1";
+
     sprintf(cmd_tump, "%s %s", "/usr/bin/cat", PATH_CORE_0);
 
     CMD CPU_CMD = CMD();
@@ -106,7 +112,6 @@ int main()
     {
 
         _CPU_USAGE.CPU_usage_V2(cpu_sum, cpu_idle);
-        CPU_CMD.exec(cmd_sleep);
         // ifstream log(cmd_tump);
         // log >> _log;
         // cout << "logss " << _log << endl;
